@@ -4,8 +4,8 @@
 #http://libevent.org/
 
 #./autogen.sh
-export CXXFLAGS=-m32
-export CFLAGS=-m32
+export CXXFLAGS=-m32 -g -O0
+export CFLAGS=-m32 -g -O0
 
 ./configure --prefix=/usr/local/libevent \
     && make -j\
