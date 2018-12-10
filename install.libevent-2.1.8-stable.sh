@@ -10,6 +10,5 @@ export CFLAGS=-m32 -g -O0
 ./configure --prefix=/usr/local/libevent \
     && make -j\
     && make install \
-    # refresh shared library cache. \
-    && ldconfig \
+    && ldconfig
     
