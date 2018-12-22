@@ -7,8 +7,12 @@
 export CXXFLAGS=-m32 -g -O0
 export CFLAGS=-m32 -g -O0
 
-./configure --prefix=/usr/local/libevent \
+rm -rf build
+mkdir build && cd build \
+    &&../configure --prefix=$(pwd)/dist \
     && make -j\
     && make install \
-    && ldconfig
-    
+    && ldconfig \
+    && echo "install success"
+cp ./dist/include/* /usr/local/include
+cp ./dist/lib /usr/local/lib    
